@@ -1,8 +1,5 @@
-import datetime
 import json
-import logging
 import os
-import sys
 import time
 
 from selenium import webdriver
@@ -79,9 +76,6 @@ class SiteReader:
     def quit(self):
         if self.driver:
             self.driver.quit()
-
-    def isnt_login(self):
-        return self.driver.current_url.startswith(SITE_URLS['login'])
 
     def wait_for(self, timeout=1, message=None):
         if message:
